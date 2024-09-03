@@ -1,1 +1,4 @@
 /target
+
+# Don't want in progress work to be committed
+main.rs
