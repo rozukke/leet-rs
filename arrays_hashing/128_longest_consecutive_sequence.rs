@@ -1,6 +1,12 @@
 use std::collections::HashSet;
 
+/// Complexity: O(n) => worst case of 2 full iterations
+///
+/// We first collect into a set for O(1) search, and then to iterate through the set to find valid
+/// sequences. Sequence starts are any number i where i - 1 is not present in the set. We then count
+/// up until the sequence ends, and find the maximum of all sequences.
 impl Solution {
+    // TODO: Radix sort solution also available
     pub fn longest_consecutive(nums: Vec<i32>) -> i32 {
         let set: HashSet<_> = nums.into_iter().collect();
 

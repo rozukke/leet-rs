@@ -1,3 +1,10 @@
+/// Complexity: O(n) => 1 iteration through input in both cases
+///
+/// We ensure that delimiters are not ever possible as part of the input strings by encoding the
+/// length of each string as part of the delimiter. 'aaa' would be encoded as '3:aaa', so that
+/// after taking in the value up to the ':' delimiter, we get a length value of 3 that is guaranteed to
+/// contain the full string. After that, we can immediately assume that it is followed by another
+/// delimiter and restart the process.
 impl Solution {
     pub fn encode(strs: Vec<String>) -> String {
         // Average word length is 5, add 2 characters for delimiter and length
