@@ -1,3 +1,8 @@
+/// Complexity: O(1) => Board size stays the same and we always iterate the entire thing.
+///
+/// We split into 3 rules, which are the rows, columns, and squares, and access each of them for
+/// every element on the board, returning false if the number is already present for any of the
+/// rules.
 use std::collections::HashMap;
 
 impl Solution {

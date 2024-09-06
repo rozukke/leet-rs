@@ -1,9 +1,9 @@
-use std::collections::HashMap;
-
 /// Complexity: O(n) => 1 iteration through input in the worst case
 ///
 /// We iterate and store the complement of each number we come across as well as its index. If we
 /// then encounter the complement in the map, we can immediately return both indexes.
+use std::collections::HashMap;
+
 impl Solution {
     pub fn two_sum(nums: Vec<i32>, target: i32) -> Vec<i32> {
         // This should realistically be tuned to expected input size

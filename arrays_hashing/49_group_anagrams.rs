@@ -1,3 +1,7 @@
+/// Complexity: O(n) => 1 iteration through input
+///
+/// We collect the character frequency from each input word, which we can then use as a key, since
+/// anagrams share character frequencies. The resulting map is then simply converted to a vector.
 use std::collections::HashMap;
 
 impl Solution {

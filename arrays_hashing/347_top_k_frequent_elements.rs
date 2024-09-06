@@ -1,3 +1,11 @@
+/// Complexity: O(n) => Guaranteed one full iteration through input
+///
+/// Here we use a trick based on the fact that we know the maximum amount of numbers, and can thus
+/// create an array of frequencies. Each elemen in the array represents a number of times a number can
+/// appear in the input, e.g. if the number 7 appears 3 times, it is added to the vector at index
+/// 3. This array is inherently sorted, meaning that we can iterate through it in reverse to take
+/// the first k largest elements, which would be the k most frequent elements. We do have to
+/// flatten the inside vectors to deal with values that have duplicate frequencies.
 use std::collections::HashMap;
 
 impl Solution {
